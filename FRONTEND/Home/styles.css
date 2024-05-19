@@ -1,9 +1,14 @@
+body{
+    background-image: url(/images/indexImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 h1 {
-    color: blue;
+    color: hsl(356, 64%, 61%);
     text-size-adjust: 12px;
     text-align: center;
 }
-
 #menuButton {
     padding: 10px 20px;
     font-size: 16px;
