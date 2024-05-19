@@ -20,11 +20,10 @@ app.get('/strategies', (req, res) => {
 });
 
 function getDataForParam(param) {
-  // This is a simple example. Replace it with actual data fetching logic.
   const dataStore = {
-    location1: 'Details about location 1',
-    location2: 'Details about location 2',
-    location3: 'Details about location 3'
+    Ascent: 'Details about Ascent',
+    Breeze: 'Details about Breeze',
+    Bind: 'Details about bind'
   };
   return dataStore[param] || 'No information available for this location.';
 }
@@ -32,7 +31,7 @@ app.get('/maps/:param', (req, res) => {
   const param = req.params.param;
   const data = getDataForParam(param); // Fetch or compute data based on the param
   
-  // Assuming you have an HTML file to serve with dynamic data
+  
   res.send(`
     <!DOCTYPE html>
     <html>
