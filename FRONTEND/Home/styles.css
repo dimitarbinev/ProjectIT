@@ -3,9 +3,7 @@ h1 {
     text-size-adjust: 12px;
     text-align: center;
 }
-body {
-    background-color: aqua;
-}
+
 #menuButton {
     padding: 10px 20px;
     font-size: 16px;
