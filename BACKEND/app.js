@@ -1,16 +1,20 @@
-// to run: " npm run dev "
-console.log("seremise");
-
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 
-// Define a basic route
+// Serve static files from the 'FRONTEND' directory
+app.use(express.static(path.join(__dirname, '../FRONTEND')));
+
+// Define routes for HTML files
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.sendFile(path.join(__dirname, '../FRONTEND/Home/index.html'));
 });
 
-// Start the server
+app.get('/about_us', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/About_us/about_us.html'));
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
