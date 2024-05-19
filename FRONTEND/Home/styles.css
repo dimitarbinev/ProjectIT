@@ -1,19 +1,70 @@
-body{
+/* Background and a box */
+body
+{
     background-image: url(/images/indexImg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+#container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+#h1Element
+{
+    border: 2px solid hsl(0, 5%, 15%);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px;
+    padding: 5px;
+    max-width: fit-content;
 }
-h1 {
+h1 
+{
     color: hsl(356, 64%, 61%);
-    text-size-adjust: 12px;
-    text-align: center;
+    font-family: Rockwell Condensed;
+ 
 }
+
+
+
+/* animation */
+#animatedText 
+{
+    font-family: Rockwell Condensed; 
+    color: hsl(356, 64%, 61%);
+    font-size: 2rem;
+    text-align: center; 
+    display: block; 
+    width: 100%; 
+}
+#animatedText span
+{
+    animation-name: fall;
+}
+@keyframes fall 
+{
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* hover menu */
 #menuButton {
+    font-family: Rockwell Condensed;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: red;
+    color: hsl(356, 64%, 61%);
+    background-color: hsl(211, 26%, 12%); 
     border-radius: 7px;
 }
 
