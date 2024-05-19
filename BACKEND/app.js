@@ -15,6 +15,10 @@ app.get('/about_us', (req, res) => {
   res.sendFile(path.join(__dirname, '../FRONTEND/About_us/about_us.html'));
 });
 
+app.get('/strategies', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/Strategy/strategy.html'));
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
