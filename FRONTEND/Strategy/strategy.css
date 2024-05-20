@@ -3,5 +3,8 @@ h1{
     color:crimson;
 }
 img{
-    max-width: 350px;
+    width: 350px;
+    height: 200px;
+    margin: 10 px;
+    border-radius: 10px;
 }
