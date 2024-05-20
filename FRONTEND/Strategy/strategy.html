@@ -7,7 +7,19 @@
 <link rel="stylesheet" href="/Strategy/strategy.css">
 </head>
 <body>
-    <h1>Choose your map</h1>
+    <button id="menuButton" >Open Menu</button>
+    <div id="popupMenu" class="popup-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/strategies">Strategies</a></li>
+            <li><a href="#">Tips for improving</a></li>
+            <li><a href="/about_us">About us</a></li>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="H1element"><h1>Choose your map</h1></div>
+    </div>
+    
     <!-- <a href="/Maps/Ascent"><img src="/images/Ascent.jpg"></a> -->
     <div id="container">
         <img src="/images/BindMap.jpg" onclick="goToBind()">
@@ -15,6 +27,5 @@
         <img src="/images/AscentMap.webp" onclick="goToAscent()">
         <img src="/images/IceboxMap.webp" onclick="goToIcebox()">
     </div>
-
     <script src="/Strategy/strategy.js"></script>
 </body>
