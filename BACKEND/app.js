@@ -24,65 +24,90 @@ function getDataForParam(param) {
   const dataStore = {
     Ascent: {
       details: 'Details about Ascent',
-      videoPath: path.join(__dirname, '../FRONTEND/videos/ascent.mp4')
+      videoPaths: [
+        path.join(__dirname, '../FRONTEND/videos/ascent_a.mp4'),
+        path.join(__dirname, '../FRONTEND/videos/ascent_b.mp4')
+      ]
     },
     Breeze: {
       details: 'Details about Breeze',
-      videoPath: path.join(__dirname, '../FRONTEND/videos/breeze.mp4')
+      videoPaths: [
+        path.join(__dirname, '../FRONTEND/videos/breeze_a.mp4'),
+        path.join(__dirname, '../FRONTEND/videos/breeze_b.mp4')
+      ]
     },
     Bind: {
       details: 'Details about Bind',
-      videoPath: path.join(__dirname, '../FRONTEND/videos/bind.mp4')
+      videoPaths: [
+        path.join(__dirname, '../FRONTEND/videos/bind_a.mp4'),
+        path.join(__dirname, '../FRONTEND/videos/bind_b.mp4')
+      ]
+    },
+    Icebox: {
+      details: 'Details about Icebox',
+      videoPaths: [
+        path.join(__dirname, '../FRONTEND/videos/icebox_a.mp4'),
+        path.join(__dirname, '../FRONTEND/videos/icebox_b.mp4')
+      ]
     }
   };
-  return dataStore[param] || { details: 'No information available for this location.', videoPath: null };
+  return dataStore[param] || { details: 'No information available for this location.', videoPaths: [] };
 }
 
-function getVideoBase64(videoPath) {
-  try {
-    const videoBuffer = fs.readFileSync(videoPath);
-    return videoBuffer.toString('base64');
-  } catch (err) {
-    console.error('Error reading video file:', err);
-    return null;
-  }
+function getVideoBase64(videoPaths) {
+  return videoPaths.map(videoPath => {
+    try {
+      console.log(`Reading video file at: ${videoPath}`);
+      const videoBuffer = fs.readFileSync(videoPath);
+      return videoBuffer.toString('base64');
+    } catch (err) {
+      console.error(`Error reading video file at ${videoPath}:`, err);
+      return null;
+    }
+  }).filter(videoBase64 => videoBase64 !== null);
 }
 
 app.get('/maps/:param', (req, res) => {
   const param = req.params.param;
   const data = getDataForParam(param);
 
-  if (!data.videoPath) {
+  if (data.videoPaths.length === 0) {
     res.status(404).send('Video not found for this location.');
     return;
   }
 
-  const videoBase64 = getVideoBase64(data.videoPath);
+  const videoBase64Array = getVideoBase64(data.videoPaths);
   const videoMimeType = 'video/mp4'; // You may need to change this based on your video file type
 
-  if (!videoBase64) {
-    res.status(500).send('Error loading video file.');
+  if (videoBase64Array.length === 0) {
+    res.status(500).send('Error loading video files.');
     return;
   }
 
+  const videoElements = videoBase64Array.map((videoBase64, index) => `
+    <video width="600" controls>
+      <source src="data:${videoMimeType};base64,${videoBase64}" type="${videoMimeType}">
+      Your browser does not support the video tag.
+    </video>
+  `).join('');
+
   res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Map Information</title>
-        <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    </head>
-    <body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Map Information</title>
+      <link rel="stylesheet" type="text/css" href="/Maps/maps.css">
+  </head>
+  <body>
+    <div class="container">
       <h1>Post-Plant for ${param}</h1>
       <p>${data.details}</p>
-      <video width="600" controls>
-        <source src="data:${videoMimeType};base64,${videoBase64}" type="${videoMimeType}">
-        Your browser does not support the video tag.
-      </video>
-    </body>
-    </html>
+      ${videoElements}
+    </div>
+  </body>
+  </html>
   `);
 });
 
