@@ -74,27 +74,32 @@ h1
     top: 50px;
     left: 0;
     background-color: rgb(219, 15, 15);
-    border: 1px solid #e613e6;
-    box-shadow: 0 2px 10px rgba(53, 182, 21, 0.1);
+    border: 1px solid #000000;
     z-index: 1000;
+    border-radius: 10px;
 }
 
 .popup-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    
 }
 
 .popup-menu ul li {
     padding: 10px 20px;
+    
 }
 
 .popup-menu ul li a {
     text-decoration: none;
     color: black;
     display: block;
+    border: black;
 }
 
 .popup-menu ul li:hover {
     background-color: #f3b838;
+    border-radius: 10px;
+    border-color: #000000;
 }
