@@ -2,7 +2,7 @@
 body
 {
     background-image: url(/images/indexImg.jpg);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   
     background-size: cover;
 }
 #container
@@ -71,12 +71,13 @@ h1
 .popup-menu {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: rgb(219, 15, 15);
+    top: 60px;
+    left: 8 px;
+    background-color: hsl(211, 26%, 12%);
     border: 1px solid #000000;
     z-index: 1000;
     border-radius: 10px;
+    color: hsl(356, 64%, 61%);
 }
 
 .popup-menu ul {
@@ -93,13 +94,14 @@ h1
 
 .popup-menu ul li a {
     text-decoration: none;
-    color: black;
+    color: hsl(211, 26%, 12%);
     display: block;
-    border: black;
+    border: hsl(211, 26%, 12%);
+    color: hsl(356, 64%, 61%);
 }
 
 .popup-menu ul li:hover {
-    background-color: #f3b838;
+    background-color: hsl(218, 27%, 6%) ;
     border-radius: 10px;
     border-color: #000000;
 }
