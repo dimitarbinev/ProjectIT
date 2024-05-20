@@ -1,3 +1,3 @@
-fucntion goToAscent{
-    window.location.href= ''
+function goToAscent{
+    window.location.href= '/Maps/Ascent.'
 }
