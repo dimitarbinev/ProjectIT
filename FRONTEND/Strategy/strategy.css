@@ -1,10 +1,21 @@
+body{
+    background-color: hsl(211, 26%, 12%);
+}
 h1{
     text-align: center;
-    color:crimson;
+    color:hsl(356, 64%, 61%);
 }
 img{
+    border: 2px solid hsl(356, 64%, 61%);
+    box-shadow: 3px 3px 5px;
     width: 350px;
     height: 200px;
-    margin: 10 px;
+    margin: 10px;
     border-radius: 10px;
+    margin-top: 15%;
+    cursor: pointer;
+}
+#container {
+    display: flex;
+    justify-content: center;
 }
