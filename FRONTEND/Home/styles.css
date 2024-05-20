@@ -1,7 +1,7 @@
 /* Background and a box */
 body
 {
-    background-image: url(/images/indexImg.jpg);
+    background-image: url(/images/indexImg.png);
     background-repeat: no-repeat;   
     background-size: cover;
 }
