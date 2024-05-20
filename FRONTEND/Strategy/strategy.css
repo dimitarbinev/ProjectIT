@@ -2,3 +2,6 @@ h1{
     text-align: center;
     color:crimson;
 }
+img{
+    max-width: 350px;
+}
