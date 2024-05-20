@@ -103,7 +103,7 @@ app.get('/maps/:param', (req, res) => {
   <body>
     <div class="container">
       <h1>Post-Plant for ${param}</h1>
-      <p>${data.details}</p>
+      <!--<p>${data.details}</p>-->
       ${videoElements}
     </div>
   </body>
