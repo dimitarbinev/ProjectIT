@@ -2,7 +2,7 @@
 body
 {
     background-image: url(/images/indexImg.jpg);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   
     background-size: cover;
 }
 #container
@@ -71,8 +71,8 @@ h1
 .popup-menu {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 60px;
+    left: 8 px;
     background-color: hsl(211, 26%, 12%);
     border: 1px solid #000000;
     z-index: 1000;
