@@ -83,10 +83,8 @@ img:nth-child(4) {
     color: hsl(356, 64%, 61%);
     display: flex;
     justify-content: center;
-    gap: 18.5%;
+    gap: 18%;
 }
-
-
 #menuButton:hover {
     background-color: hsl(211, 26%, 18%);
     transform: scale(1.05);

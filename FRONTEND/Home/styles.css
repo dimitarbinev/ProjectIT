@@ -62,49 +62,68 @@ p{
 
 /* hover menu */
 #menuButton {
-    font-family: Rockwell Condensed;
+    font-family: 'Rockwell Condensed', sans-serif;
     padding: 10px 20px;
     font-size: 1.5rem;
     cursor: pointer;
     color: hsl(356, 64%, 61%);
-    background-color: hsl(211, 26%, 12%); 
+    background-color: hsl(211, 26%, 12%);
+    border: none;
     border-radius: 7px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#pElements{
+    font-size: 2rem;
+    color: hsl(356, 64%, 61%);
+    display: flex;
+    justify-content: center;
+    gap: 18%;
+}
+#menuButton:hover {
+    background-color: hsl(211, 26%, 18%);
+    transform: scale(1.05);
 }
 
+/* Popup menu */
 .popup-menu {
     display: none;
     position: absolute;
     top: 60px;
-    left: 8 px;
+    left: 8px;
     background-color: hsl(211, 26%, 12%);
-    border: 1px solid #000000;
+    border: 1px solid hsl(211, 26%, 18%);
     z-index: 1000;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     color: hsl(356, 64%, 61%);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .popup-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    
 }
 
-.popup-menu ul li {
+.popup-menu li {
     padding: 10px 20px;
-    
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.popup-menu ul li a {
+.popup-menu li a {
     text-decoration: none;
-    color: hsl(211, 26%, 12%);
-    display: block;
-    border: hsl(211, 26%, 12%);
     color: hsl(356, 64%, 61%);
+    font-size: 1.2rem;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.popup-menu ul li:hover {
-    background-color: hsl(218, 27%, 6%) ;
-    border-radius: 10px;
-    border-color: #000000;
+.popup-menu li a:hover {
+    background-color: hsl(211, 26%, 18%);
+    color: hsl(0, 0%, 100%);
 }
