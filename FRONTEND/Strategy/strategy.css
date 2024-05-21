@@ -1,33 +1,82 @@
-body{
+body {
     background-color: hsl(211, 26%, 12%);
 }
-h1{
+
+h1 {
     text-align: center;
-    color:hsl(356, 64%, 61%);
+    color: hsl(356, 64%, 61%);
     margin-top: 1%;
+    font-size: 3rem;
+    font-family: 'Rockwell Condensed', sans-serif;
+    animation: fadeIn 1.5s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
-img{
+
+#mapContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
     border: 2px solid hsl(356, 64%, 61%);
-    box-shadow: 3px 3px 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     width: 350px;
     height: 200px;
     margin: 10px;
     border-radius: 10px;
     margin-top: 0%;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
 }
-#container {
-    display: flex;
-    justify-content: center;
+
+img:nth-child(2) {
+    animation-delay: 0.3s;
 }
+
+img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+img:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu button */
 #menuButton {
-    font-family: Rockwell Condensed;
+    font-family: 'Rockwell Condensed', sans-serif;
     padding: 10px 20px;
     font-size: 1.5rem;
     cursor: pointer;
     color: hsl(356, 64%, 61%);
-    background-color: hsl(211, 26%, 12%); 
+    background-color: hsl(211, 26%, 12%);
+    border: none;
     border-radius: 7px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 #pElements{
     font-size: 2rem;
@@ -38,53 +87,51 @@ img{
 }
 
 
+#menuButton:hover {
+    background-color: hsl(211, 26%, 18%);
+    transform: scale(1.05);
+}
+
+/* Popup menu */
 .popup-menu {
     display: none;
     position: absolute;
     top: 60px;
-    left: 8 px;
+    left: 8px;
     background-color: hsl(211, 26%, 12%);
-    border: 1px solid #000000;
+    border: 1px solid hsl(211, 26%, 18%);
     z-index: 1000;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     color: hsl(356, 64%, 61%);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .popup-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    
 }
 
-.popup-menu ul li {
+.popup-menu li {
     padding: 10px 20px;
-    
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.popup-menu ul li a {
+.popup-menu li a {
     text-decoration: none;
-    color: hsl(211, 26%, 12%);
-    display: block;
-    border: hsl(211, 26%, 12%);
     color: hsl(356, 64%, 61%);
+    font-size: 1.2rem;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.popup-menu ul li:hover {
-    background-color: hsl(218, 27%, 6%) ;
-    border-radius: 10px;
-    border-color: #000000;
-}
-#H1element{
-    border: 2px solid hsl(0, 5%, 15%);
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px;
-    padding: 5px;
-    max-width: fit-content;
-}
-#container
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.popup-menu li a:hover {
+    background-color: hsl(211, 26%, 18%);
+    color: hsl(0, 0%, 100%);
 }
