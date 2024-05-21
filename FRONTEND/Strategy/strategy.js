@@ -11,8 +11,9 @@ function goToIcebox(){
     window.location.href = '/Maps/Icebox'
 }
 
-//Drop down menu
 
+
+//Drop down menu
 document.getElementById('menuButton').addEventListener('click', function() {
     const menu = document.getElementById('popupMenu');
     const menuItems = menu.querySelectorAll('li');
