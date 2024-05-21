@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/Strategy/strategy.css">
 </head>
 <body>
-    <button id="menuButton" >Open Menu</button>
+    <button id="menuButton">Open Menu</button>
     <div id="popupMenu" class="popup-menu">
         <ul>
             <li><a href="/">Home</a></li>
@@ -16,16 +15,15 @@
             <li><a href="/about_us">About us</a></li>
         </ul>
     </div>
-    <div id="container">
-        <div id="H1element"><h1>Choose your map</h1></div>
+    <div id="headerContainer">
+        <h1 id="H1element">Choose your map</h1>
     </div>
-    
-    <!-- <a href="/Maps/Ascent"><img src="/images/Ascent.jpg"></a> -->
-    <div id="container">
-        <img src="/images/BindMap.jpg" onclick="goToBind()">
-        <img src="/images/BreezeMap.jpg" onclick="goToBreeze()">
-        <img src="/images/AscentMap.webp" onclick="goToAscent()">
-        <img src="/images/IceboxMap.webp" onclick="goToIcebox()">
+    <div id="mapContainer">
+        <img src="/images/BindMap.jpg" onclick="goToBind()" class="mapImage">
+        <img src="/images/BreezeMap.jpg" onclick="goToBreeze()" class="mapImage">
+        <img src="/images/AscentMap.webp" onclick="goToAscent()" class="mapImage">
+        <img src="/images/IceboxMap.webp" onclick="goToIcebox()" class="mapImage">
     </div>
     <script src="/Strategy/strategy.js"></script>
 </body>
+</html>
