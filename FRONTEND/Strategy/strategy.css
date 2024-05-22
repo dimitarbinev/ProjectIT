@@ -1,8 +1,10 @@
+/* Background */
 body {
     background-image: url(/images/background.png);
     overflow: hidden;
 }
 
+/* Header */
 h1 {
     text-align: center;
     color: hsl(356, 64%, 61%);
@@ -24,35 +26,70 @@ h1 {
     object-fit: cover; 
 }
 
+#AgentContainer {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+.AgentImg {
+    height: 475px;
+    width: auto; 
+    object-fit: cover; 
+}
+
+/* Map Container */
 #mapContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 20vh;
 }
 
-.mapImage   {
+/* Map Item */
+.mapItem {
+    position: relative;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mapItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mapItem label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Rockwell Condensed', sans-serif;
+}
+
+/* Images */
+.mapImage {
     border: 2px solid hsl(356, 64%, 61%);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     width: 350px;
     height: 200px;
-    margin: 10px;
     border-radius: 10px;
-    margin-top: 0%;
     cursor: pointer;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
 }
 
-img:nth-child(2) {
+.mapImage:nth-child(2) {
     animation-delay: 0.3s;
 }
 
-img:nth-child(3) {
+.mapImage:nth-child(3) {
     animation-delay: 0.6s;
 }
 
-img:nth-child(4) {
+.mapImage:nth-child(4) {
     animation-delay: 0.9s;
 }
 
@@ -78,7 +115,7 @@ img:nth-child(4) {
     }
 }
 
-/* Menu button */
+/* Menu Button */
 #menuButton {
     font-family: 'Rockwell Condensed', sans-serif;
     padding: 10px 20px;
@@ -90,19 +127,21 @@ img:nth-child(4) {
     border-radius: 7px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-#pElements{
+
+#pElements {
     font-size: 2rem;
     color: hsl(356, 64%, 61%);
     display: flex;
     justify-content: center;
     gap: 18%;
 }
+
 #menuButton:hover {
     background-color: hsl(211, 26%, 18%);
     transform: scale(1.05);
 }
 
-/* Popup menu */
+/* Popup Menu */
 .popup-menu {
     display: none;
     position: absolute;
@@ -139,6 +178,7 @@ img:nth-child(4) {
     font-size: 1.2rem;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 3px;
 }
 
 .popup-menu li a:hover {

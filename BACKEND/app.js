@@ -93,21 +93,30 @@ app.get('/maps/:param', (req, res) => {
 
   res.send(`
   <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Map Information</title>
-      <link rel="stylesheet" type="text/css" href="/Maps/maps.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Post-Plant for ${param}</h1>
-      <!--<p>${data.details}</p>-->
-      ${videoElements}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Information</title>
+    <link rel="stylesheet" type="text/css" href="/Maps/maps.css">
+</head>
+<body>
+    <button id="menuButton">Open Menu</button>
+    <div id="popupMenu" class="popup-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/strategies">Strategies</a></li>
+            <li><a href="#">Tips for improving</a></li>
+            <li><a href="/about_us">About us</a></li>
+        </ul>
     </div>
-  </body>
-  </html>
+    <div class="container">
+        <h1>Post-Plant for ${param}</h1>
+        ${videoElements}
+    </div>
+    <script src="/Maps/maps.js"></script>
+</body>
+</html>
   `);
 });
 

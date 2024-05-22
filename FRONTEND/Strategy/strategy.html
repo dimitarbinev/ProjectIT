@@ -18,17 +18,23 @@
     <div id="headerContainer">
         <h1 id="H1element">Choose your map</h1>
     </div>
-        <span id="pElements">
-            <p> Bind </p> <p> Breeze </p> <p> Ascent </p> <p> Icebox</p>
-        </span>
-    
-    <!-- <a href="/Maps/Ascent"><img src="/images/Ascent.jpg"></a> -->
     <div id="mapContainer">
-        <img src="/images/BindMap.jpg" onclick="goToBind()" class="mapImage">
-        <img src="/images/BreezeMap.jpg" onclick="goToBreeze()" class="mapImage">
-        <img src="/images/AscentMap.webp" onclick="goToAscent()" class="mapImage">
-        <img src="/images/IceboxMap.webp" onclick="goToIcebox()" class="mapImage">
-
+        <div class="mapItem">
+            <img src="/images/BindMap.jpg" onclick="goToBind()" class="mapImage">
+            <label>Bind</label>
+        </div>
+        <div class="mapItem">
+            <img src="/images/BreezeMap.jpg" onclick="goToBreeze()" class="mapImage">
+            <label>Breeze</label>
+        </div>
+        <div class="mapItem">
+            <img src="/images/AscentMap.webp" onclick="goToAscent()" class="mapImage">
+            <label>Ascent</label>
+        </div>
+        <div class="mapItem">
+            <img src="/images/IceboxMap.webp" onclick="goToIcebox()" class="mapImage">
+            <label>Icebox</label>
+        </div>
     </div>
 
     <div id="AgentContainer">
