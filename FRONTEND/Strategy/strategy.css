@@ -1,5 +1,6 @@
 body {
     background-image: url(/images/background.png);
+    overflow: hidden;
 }
 
 h1 {
@@ -12,13 +13,24 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+#AgentContainer {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+.AgentImg {
+    height: 475px;
+    width: auto; 
+    object-fit: cover; 
+}
+
 #mapContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-img {
+.mapImage   {
     border: 2px solid hsl(356, 64%, 61%);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     width: 350px;
