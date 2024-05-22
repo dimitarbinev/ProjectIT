@@ -1,6 +1,52 @@
-h1 {
+body, h1, p, a, img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    background-color: hsl(211, 26%, 12%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+header {
+    background-color: hsl(356, 64%, 61%);
+    color: white;
     text-align: center;
-    text-size-adjust: 20px;
-    color:aquamarine;
-    
+    padding: 20px 0;
+    text-size-adjust: 100px;
+}
+#content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+#content p {
+    margin-bottom: 20px;
+}
+#team-photo {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+#social-media {
+    text-align: center;
+}
+#social-media a {
+    margin: 0 10px;
+}
+#social-media img {
+    width: 32px;
+    height: 32px;
+}
+a {
+    color: hsl(356, 64%, 61%);
+}
+h1 {
+    font-size-adjust: 100px;
+    color:hsl(211, 26%, 12%);
 }
