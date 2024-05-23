@@ -1,40 +1,43 @@
 /* Background and a box */
-body
-{
+body {
     background-image: url(/images/indexImg.png);
     background-repeat: no-repeat;   
     background-size: cover;
 }
-#container
-{
+
+#container {                                                         
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-#h1Element
-{
+#h1Element {
     border: 2px solid hsl(0, 5%, 15%);
     border-radius: 10px;
-    box-shadow: 3px 3px 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     padding: 5px;
     max-width: fit-content;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
-h1 
-{
+
+h1 {
     color: hsl(356, 64%, 61%);
     font-family: Rockwell Condensed;
- 
+    font-size: 2.5rem; /* Increased font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    
 }
-p{
+
+#h1Element:hover {
+    transform: scale(1.03); /* Slightly enlarges on hover */
+}
+
+p {
     margin-top: 7%;
 }
 
-
-
-/* animation */
-#animatedText 
-{
+/* Animation */
+#animatedText {
     font-family: Rockwell Condensed; 
     color: hsl(356, 64%, 61%);
     font-size: 2rem;
@@ -42,12 +45,12 @@ p{
     display: block; 
     width: 100%; 
 }
-#animatedText span
-{
+
+#animatedText span {
     animation-name: fall;
 }
-@keyframes fall 
-{
+
+@keyframes fall {
     0% {
         opacity: 0;
         transform: translateY(-20px);
@@ -58,9 +61,7 @@ p{
     }
 }
 
-
-
-/* hover menu */
+/* Hover menu */
 #menuButton {
     font-family: 'Rockwell Condensed', sans-serif;
     padding: 10px 20px;
@@ -72,13 +73,15 @@ p{
     border-radius: 7px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-#pElements{
+
+#pElements {
     font-size: 2rem;
     color: hsl(356, 64%, 61%);
     display: flex;
     justify-content: center;
     gap: 18%;
 }
+
 #menuButton:hover {
     background-color: hsl(211, 26%, 18%);
     transform: scale(1.05);
@@ -121,6 +124,7 @@ p{
     font-size: 1.2rem;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 3px;
 }
 
 .popup-menu li a:hover {
