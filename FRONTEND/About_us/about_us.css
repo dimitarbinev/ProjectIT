@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Valorant';
+    src: url('../Fonts/Valorant Font.ttf') format('truetype');
+}
 body, h1, p, a, img {
     margin: 0;
     padding: 0;
@@ -13,6 +17,7 @@ body {
     line-height: 1.6;
 }
 header {
+    font-family: Valorant;
     background-color: hsl(356, 64%, 61%);
     color: black;
     text-align: center;
@@ -26,6 +31,7 @@ header {
 }
 #content p {
     margin-bottom: 20px;
+    font-family: Valorant;
 }
 #team-photo {
     width: 100%;
