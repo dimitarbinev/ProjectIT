@@ -19,9 +19,21 @@ app.get('/about_us', (req, res) => {
 app.get('/strategies', (req, res) => {
   res.sendFile(path.join(__dirname, '../FRONTEND/Comps_lineups_choice/comps_lineups_choice.html'));
 });
+
+app.get('/TeamComps', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/TeamComps/TeamCompMap.html'));
+});
  
 app.get('/lineupsChoice', (req, res) => {
   res.sendFile(path.join(__dirname, '../FRONTEND/Strategy/strategy.html'));
+});
+
+app.get('/comps', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/Strategy/comps.html'));
+});
+
+app.get('/AscentComp', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/TeamComps/AscentComp.html'));
 });
 
 app.get('/comps', (req, res) => {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/Strategy/strategy.css">
+<link  rel="icon" type="image/png" href="\images\FaviconImg.png">
+</head>
+<body>
+    <button id="menuButton">Open Menu</button>
+    <div id="popupMenu" class="popup-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/strategies">Strategies</a></li>
+            <li><a href="/about_us">About us</a></li>
+        </ul>
+    </div>
+    <div id="headerContainer">
+        <h1 id="H1element">Choose your map</h1>
+    </div>
+    <div id="mapContainer">
+        <div class="mapItem">
+            <img src="/images/BindMap.jpg" onclick="goToBind()" class="mapImage">
+            <label>Bind</label>
+        </div>
+        <div class="mapItem">
+            <img src="/images/BreezeMap.jpg" onclick="goToBreeze()" class="mapImage">
+            <label>Breeze</label>
+        </div>
+        <div class="mapItem">
+            <img src="/images/AscentMap.webp" onclick="goToAscent()" class="mapImage">
+            <label>Ascent</label>
+        </div>
+        <div class="mapItem">
+            <img src="/images/IceboxMap.webp" onclick="goToIcebox()" class="mapImage">
+            <label>Icebox</label>
+        </div>
+    </div>
+
+    <div id="AgentContainer">
+        <img src="\images\Raze.webp"  class="AgentImg">
+        <img src="\images\Reyna.webp"  class="AgentImg"> 
+    </div>
+    
+
+    <script src="/Strategy/strategy.js"></script>
+</body>
+</html>
