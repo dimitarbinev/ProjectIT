@@ -5,11 +5,25 @@
 }
 
 body {
-    background-image: url(/images/indexImg.psng);
+    background-image: url(/images/background.png);
     background-repeat: no-repeat;   
     background-size: cover;
 }
-
+img{
+    max-width: 125px;
+    max-height: 125px;
+    border-radius: 10%;
+    border: 2px solid hsl(0, 5%, 15%);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    max-width: fit-content;
+}
+.ContainerImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 #container {                                                         
     display: flex;
     flex-direction: row;
@@ -36,9 +50,15 @@ h1 {
 #h1Element:hover {
     transform: scale(1.03); /* Slightly enlarges on hover */
 }
-
-p {
-    margin-top: 7%;
+p{
+    font-size: 2rem;
+    font-family: Valorant;
+    display: flex;
+    justify-content: center;
+    color: hsl(356, 64%, 61%);
+}
+label{
+    font-family: Valorant;
 }
 
 /* Animation */
