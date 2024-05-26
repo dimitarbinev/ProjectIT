@@ -1,12 +1,15 @@
 Bind - 1. Jett, KAY/O, Sova, Omen, Killjoy
        2. Raze, KAY/O, Astra, Omen, Killjoy
        3. Raze, KAY/O, Omen, Cypher, Killjoy
+       
 Ascent - 1. Jett, Omen, Sova, Killjoy, Cypher
          2. Raze, Astra, Sova, KAY/O, Cypher
          3. Jett, Astra, Sova, Gekko, Killjoy
+
 Breeze - 1. Jett, Sova, Skye, Cypher, Viper
          2. Jett, Sova, Sage, Cypher, Viper
          3. Jett, Reyna, KJ, Sova, Viper
+
 Icebox - 1. Viper, Killjoy, Sova, Sage, Jett
          2. Viper, Sage, Cypher, KAY/O, Raze
          3. Viper, Cypher, Gekko, Jett, Killjoy
