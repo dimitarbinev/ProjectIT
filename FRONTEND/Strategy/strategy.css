@@ -1,4 +1,8 @@
 /* Background */
+@font-face {
+    font-family: 'Valorant';
+    src: url('../Fonts/Valorant Font.ttf') format('truetype');
+}
 body {
     background-image: url(/images/background.png);
     overflow: hidden;
@@ -10,7 +14,7 @@ h1 {
     color: hsl(356, 64%, 61%);
     margin-top: 1%;
     font-size: 3rem;
-    font-family: 'Rockwell Condensed', sans-serif;
+    font-family: Valorant;
     animation: fadeIn 1.5s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -69,7 +73,7 @@ h1 {
     color: hsl(356, 64%, 61%);
     padding: 5px 10px;
     border-radius: 5px;
-    font-family: 'Rockwell Condensed', sans-serif;
+    font-family: Valorant;
 }
 
 /* Images */
@@ -121,7 +125,7 @@ h1 {
 
 /* Menu Button */
 #menuButton {
-    font-family: 'Rockwell Condensed', sans-serif;
+    font-family: Valorant;
     padding: 10px 20px;
     font-size: 1.5rem;
     cursor: pointer;
@@ -147,6 +151,7 @@ h1 {
 
 /* Popup Menu */
 .popup-menu {
+    font-family: Valorant;
     display: none;
     position: absolute;
     top: 60px;
