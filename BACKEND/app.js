@@ -20,6 +20,10 @@ app.get('/strategies', (req, res) => {
   res.sendFile(path.join(__dirname, '../FRONTEND/Strategy/strategy.html'));
 });
 
+app.get('/comps', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/Strategy/comps.html'));
+});
+
 function getDataForParam(param) {
   const dataStore = {
     Ascent: {
