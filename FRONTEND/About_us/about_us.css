@@ -2,6 +2,10 @@
     font-family: 'Valorant';
     src: url('../Fonts/Valorant Font.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Valorant';
+    src: url('../Fonts/Valorant Font.ttf') format('truetype');
+}
 /* Background and a box */
 body {
     background-image: url(/images/indexImg.png);
@@ -103,6 +107,7 @@ p {
     line-height: 1.6;
 }
 header {
+    font-family: Valorant;
     background-color: hsl(356, 64%, 61%);
     color: black;
     text-align: center;
@@ -116,6 +121,7 @@ header {
 }
 #content p {
     margin-bottom: 20px;
+    font-family: Valorant;
 }
 
 .popup-menu li a {
