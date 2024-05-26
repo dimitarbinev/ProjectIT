@@ -7,12 +7,11 @@
 body {
     
     background-image: url(/images/background.png);
-    background-repeat: no-repeat;
     background-size: cover;
 }
 img{
-    max-width: 125px;
-    max-height: 125px;
+    width: 14vw;
+    height: 14vh;
     border: 2px solid hsl(0, 5%, 15%);
     border-radius: 25px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
