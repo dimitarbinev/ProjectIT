@@ -1,4 +1,9 @@
 /* Background and a box */
+@font-face {
+    font-family: 'Valorant';
+    src: url('../Fonts/Valorant Font.ttf') format('truetype');
+}
+
 body {
     background-image: url(/images/indexImg.png);
     background-repeat: no-repeat;   
@@ -22,7 +27,7 @@ body {
 
 h1 {
     color: hsl(356, 64%, 61%);
-    font-family: Rockwell Condensed;
+    font-family: Valorant;
     font-size: 2.5rem; /* Increased font size */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
     
@@ -38,7 +43,7 @@ p {
 
 /* Animation */
 #animatedText {
-    font-family: Rockwell Condensed; 
+    font-family: Valorant;
     color: hsl(356, 64%, 61%);
     font-size: 2rem;
     text-align: center; 
@@ -63,7 +68,7 @@ p {
 
 /* Hover menu */
 #menuButton {
-    font-family: 'Rockwell Condensed', sans-serif;
+    font-family: Valorant;
     padding: 10px 20px;
     font-size: 1.5rem;
     cursor: pointer;
@@ -103,6 +108,7 @@ p {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: Valorant;
 }
 
 .popup-menu ul {
