@@ -58,9 +58,6 @@ p{
     justify-content: center;
     color: hsl(356, 64%, 61%);
 }
-label{
-    font-family: Valorant;
-}
 
 /* Animation */
 #animatedText {
