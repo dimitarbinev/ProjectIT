@@ -2,13 +2,13 @@ function goToAscent(){
     window.location.href = '/TeamComps/Ascent'
 }
 function goToBind(){
-    window.location.href = '/Maps/Bind'
+    window.location.href = '/TeamComps/Bind'
 }
 function goToBreeze(){
-    window.location.href = '/Maps/Breeze'
+    window.location.href = '/TeamComps/Breeze'
 }
 function goToIcebox(){
-    window.location.href = '/Maps/Icebox'
+    window.location.href = '/TeamComps/Icebox'
 }
 
 // Button/ dropdown menu

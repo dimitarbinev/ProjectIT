@@ -52,6 +52,18 @@ app.get('/TeamComps/Ascent', (req, res) => {
   res.sendFile(path.join(__dirname, '../FRONTEND/TeamComps/AscentComp.html'));
 });
 
+app.get('/TeamComps/Bind', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/TeamComps/BindComp.html'));
+});
+
+app.get('/TeamComps/Breeze', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/TeamComps/BreezeComp.html'));
+});
+
+app.get('/TeamComps/Icebox', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/TeamComps/IceboxComp.html'));
+});
+
 function getDataForParam(param) {
   const dataStore = {
     Ascent: {
