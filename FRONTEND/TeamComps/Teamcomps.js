@@ -1,3 +1,16 @@
+function goToAscent(){
+    window.location.href = '/TeamComps/Ascent'
+}
+function goToBind(){
+    window.location.href = '/Maps/Bind'
+}
+function goToBreeze(){
+    window.location.href = '/Maps/Breeze'
+}
+function goToIcebox(){
+    window.location.href = '/Maps/Icebox'
+}
+
 // Button/ dropdown menu
 document.getElementById('menuButton').addEventListener('click', function() {
     const menu = document.getElementById('popupMenu');
