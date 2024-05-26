@@ -142,7 +142,7 @@ p {
 /* Choice Buttons */
 .choiceButton {
     font-family: 'Rockwell Condensed', sans-serif;
-    padding: 30px 60px; /* Increased padding */
+    padding: 20px 40px; /* Increased padding */
     font-size: 2rem; /* Increased font size */
     cursor: pointer;
     color: hsl(356, 64%, 61%);
@@ -150,12 +150,6 @@ p {
     border: none;
     border-radius: 7px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 200px; /* Ensure same width */
-    height: 80px; /* Ensure same height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .choiceButton:hover {

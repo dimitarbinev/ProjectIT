@@ -17,6 +17,10 @@ app.get('/about_us', (req, res) => {
 });
 
 app.get('/strategies', (req, res) => {
+  res.sendFile(path.join(__dirname, '../FRONTEND/Comps_lineups_choice/comps_lineups_choice.html'));
+});
+ 
+app.get('/lineupsChoice', (req, res) => {
   res.sendFile(path.join(__dirname, '../FRONTEND/Strategy/strategy.html'));
 });
 

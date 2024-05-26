@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/Home/styles.css">
+<link rel="stylesheet" href="/Comps_lineups_choice/comps_lineups_choice.css">
 <link  rel="icon" type="image/png" href="\images\FaviconImg.png">
+<title>Choose Option</title>
 </head>
 <body>
-<button id="menuButton" >Open Menu</button>
+<button id="menuButton">Open Menu</button>
 <div id="popupMenu" class="popup-menu">
     <ul>
         <li><a href="/">Home</a></li>
@@ -15,17 +16,17 @@
         <li><a href="/about_us">About us</a></li>
     </ul>
 </div>
-<div id="container" >
+<div id="container">
     <div id="h1Element">
-        <h1>Valorant Team Comps and Strategies</h1> 
+        <h1>Choose Your Option</h1> 
     </div>
 </div>
 
+<div id="buttonContainer">
+    <button class="choiceButton" onclick="navigateTo('lineups')">Lineups</button>
+    <button class="choiceButton" onclick="navigateTo('teamcomps')">Team Comps</button>
+</div>
 
-
-    <p id="animatedText">The best website for Valorant players, looking for the best strategies in game!</p>
-
-
-<script src="/Home/script.js"></script>
+<script src="/Comps_lineups_choice/comps_lineups_choice.js"></script>
 </body>
 </html>
