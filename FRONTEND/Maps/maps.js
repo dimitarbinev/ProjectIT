@@ -27,7 +27,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
             }, 100 * index);
         });
         
-        setTimeout(() => {
+        setTimeout(() =>  {
             menu.style.display = 'none';
         }, 100 * menuItems.length + 300); // Wait for all items to be hidden before setting display to none
     }
