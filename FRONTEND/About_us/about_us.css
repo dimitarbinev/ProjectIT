@@ -6,8 +6,8 @@
 /* Background and a box */
 body {
     background-image: url(/images/background.png);
-    background-repeat: no-repeat;   
-    background-size: cover;
+    background-size: cover; 
+    background-position: center;
 }
 
 img {
