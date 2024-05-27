@@ -5,9 +5,8 @@
 
 /* Background and a box */
 body {
-    background-image: url(/images/background.png);
-    background-size: cover; 
-    background-position: center;
+    background-image: url(/images/background.png);   
+    background-size: cover;
 }
 
 img {

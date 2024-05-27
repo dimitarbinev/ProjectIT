@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: hsl(208, 38%, 9%);
     background-image: url(/images/indexImg.png);
     background-repeat: no-repeat;   
     background-size: cover;

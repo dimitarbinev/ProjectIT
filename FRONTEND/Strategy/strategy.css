@@ -4,6 +4,7 @@
     src: url('../Fonts/Valorant Font.ttf') format('truetype');
 }
 body {
+    background-color: hsl(208, 38%, 9%);
     background-image: url(/images/background.png);
     overflow: hidden;
 }
